@@ -1,0 +1,336 @@
+# Understanding Git: A Beginner's Guide to Version Control
+
+## Introduction
+
+<!-- - Briefly introduce the importance of version control in software development. -->
+
+Recently, while mentoring my friends, I received numerous questions about Git. After receiving positive feedback from mentoring friends on my straightforward explanations of Git, I've decided to share my insights in a blog.Their feedback was that I explain concepts in a straightforward manner, which they found helpful for efficient learning, often stating, "You break it down in a way that's easy for us to understand."
+
+In this blog, we'll learn Git, Version Control, and related concepts.
+
+## What is Git?
+
+_This is standard defination of Git you would find on internet:_
+
+Git is a free tool for keeping track of changes in your code. It was made by Linus Torvalds in 2005. Unlike older systems, Git lets each developer have a complete history of their code on their own computer. This makes the first copy a bit slow, but everyday tasks like saving changes or looking at code history are much quicker.
+
+Git is great at handling different versions of your code, like when multiple people are working on a project. It's the go-to tool for many developers, making teamwork smoother with features like branches and pull requests. It's the most popular way to control versions in software development today.
+
+_For dummies:_
+
+Imagine you're an author working on a book with multiple co-authors. Your goal is to create a masterpiece, and each co-author contributes their unique chapters. However, coordinating everyone's work becomes challenging.
+
+So, we were introduced to Git. By which we can track the universal version of the book. We can even keep a track on the changes made by the all the co-author to specific parts of the book. This becomes efficient for the writers to collaborate better and have a shared local copy on their individual machine.
+
+_sounds helpful and easy?_
+
+## Setting Up Git
+
+<!-- - Guide readers through the process of installing Git on different platforms. -->
+
+Several operating system comes with Git pre-installed, but it depends on the specific version and distribution:
+
+#### Pre-installed Git:
+
+- **macOS**: Most macOS versions since Mavericks (10.9) include Git pre-installed as part of the Xcode Command Line Tools. However, if you don't have Xcode or haven't installed the tools, you'll need to install Git separately.
+
+- **Linux**: Many popular Linux distributions like Ubuntu, Debian, Fedora, and Arch Linux come with Git pre-installed by default.
+
+- **Windows**: Git is not included with default Windows installations. However, Microsoft offers a standalone Git installer and includes Git Bash within Windows Subsystem for Linux (WSL).
+
+To see if Git is already installed on your system, you can open terminal or command prompt and type `git --version`
+and if you see output similar to this `git version 2.40.1` then Git is already present on your system.
+
+#### How to Download Git
+
+You can install Git mainly using a terminal or a browser.
+
+**For Ubuntu**
+
+```bash
+$ sudo apt-get install git
+```
+
+**For Mac**
+
+```bash
+$ brew install git`
+```
+
+The above commands will install Git on your system, but you will need to configure for yourself by providing your username and email.
+
+#### Git Configuration
+
+<!-- - Provide basic configuration steps, including setting up a username and email. -->
+
+After installing Git on your system, the next step is to configure it. Let's get familiar with some common terms within the Git ecosystem.
+
+Git config is the way to personalize your Git environment and behaviour. It stores all the settings that determine how Git operates into `~/.gitconfig`or `%HOME%\.gitconfig on Windows`(for global config) and `.git/config`(for local config), including:
+
+- User information: Your name and email address used for commits which should be same as Github credentials.
+- Global settings: Default settings applied to all Git repositories on your system.
+- Local settings: Settings specific to individual repositories.
+- Aliases: Shortcuts for frequently used Git commands.
+- Editors: Preferred editors for commit messages and configuration files e.g. vim, nano, etc.
+
+Now, the question is: how do you configure these settings to get started and actually use Git?
+
+#### How to edit Git config:
+
+You can edit the .gitconfig files directly or use the `git config` command. The `git config` command provides a more convenient way to set, get, or list configuration values:
+
+- Set a value:
+
+```bash
+git config --global <key> <value> #(global)
+```
+
+```bash
+git config <key> <value> #(local)
+```
+
+- Get a value:
+
+```bash
+git config --global --get <key> #(global)
+```
+
+```bash
+git config --get <key> #(local)
+```
+
+- List all values:
+
+```bash
+git config --list
+```
+
+Incase you are wondering what is key and value into the command? Don't worry initially you just need a couple of basic Git config commands to get started: `git config --global user.name` and `git config --global user.email`.
+
+**Some common configuration options:**
+
+Here are some common configuration options you might want to consider:
+
+- user.name: Your name for Git commits
+- user.email: Your email address for Git commits
+- core.editor: Your preferred editor for commit messages and config files
+- alias.st: Short alias for git status
+- push.default: Set the default behavior for git push (e.g., simple or merge)
+- core.autocrlf: Adjust line ending conversion for Windows
+
+## Basic Git Concepts
+
+#### Repository (Repo):
+
+  <!-- - Explain what a repository is and its significance in Git. -->
+
+_Technical defination_
+
+A Git repository is a place where all the files and folders in your project, including code, documentation, images, and any other relevant files are stored. It allows you to record and manage different versions of your project, collaborate with others, and revert to previous versions if needed. It also contains a commit history, and information about branches.
+
+_For dummies_
+
+You as the author are writing story which keeps growing, and you want to make sure you remember every version of it. A Git repository is like a special shelve of the library where you keep all the different drafts of your story.
+
+Whenever you write a new part of the story, you add it to the special shelve. If you want to try something different, like giving a character a new adventure, you create a new version of that part and keep both versions in your shelve.
+
+Now, let's say the co-author finds the new character interesting in your story and wants to help you write it. With Git, the co-author can take a copy of your special shelve, make changes or add new ideas, and then give the updated shelve back to you. It's like teamwork in creating the best story ever!
+
+The magical thing is, if you ever want to go back to the way the story was at the beginning or at any other point, your special shelve remembers every single version. So, Git helps authors work together, keep track of their story changes, and make their tale truly amazing!
+
+Now the question is how do you create a Git repository?
+
+First, you need to move to the desired project folder where you want to have your repo. So, open your terminal and type `cd ~/name_of_your_project_folder` to move to the desired folder. `cd` is change directory and directory is nothing but folder so further down the explanation If I use folder/directory don't get confused it is the same.
+
+```bash
+cd ~/your_desired_project_folder
+git init
+```
+
+The `git init` cmd create a `.git` folder inside your project folder which holds all the metadata, and config about your Git repo. This folder is hidden but you can see this by turning on the _show hidden files_.
+
+This `git init` cmd initializes a empty repo inside your project directory and your simple project folder is transformed into version controlled directory.
+
+When you begin a new project, kick things off by typing `git init`. Whenever you return to work on your project, it's a good idea to run `git init` again to reinitialize the Git repo.
+
+Now, Git won't automatically keep track of your files – you have to tell it which ones to pay attention to. So, lets create a new file for your project, like a `names.txt` file, by typing `touch names.txt`. It's like giving Git a heads-up about a new chapter in your project story.
+
+To check what's happening in your project, use `git status`. If it says a file is "untracked," it means Git isn't paying attention to it yet.
+
+To make Git pay attention, use `git add names.txt` to say, "Hey, I want you to watch this file!" If you have more files, `git add .` will add them all. It's like gathering all your materials for your project in one place, called the **staging area**.
+
+So, remember to start with `git init` and use `git add` to introduce Git to your project files.
+
+#### Commit:
+
+<!-- - Define commits as snapshots of changes and how they form the project's history. -->
+
+_Technical definition_
+
+A commit is like taking a snapshot of your project at a specific point in time. It captures the state of all the files and folders in your repository, along with a message describing the changes you made. The commit stores the actual content of your files at that specific time, not just the differences from the previous version. This allows you to easily revert to any old version if needed.
+
+There is also a commit message which describes what changes you made in the commit. It is crucial for understanding the history of your project and collaborating effectively with others. **While technically, Git doesn't enforce a hard limit of 50 characters for commit messages, it is highly recommended to keep it concise and under 50 characters for good practices.**
+
+The commit metadata holds additional information like the author, date, and parent commit (if it's part of a branch).
+
+_For dummies_
+
+As you are writing a fantastic story in your book. Each time you finish a part of your story, it's like completing a chapter. Now, when you're really happy with how a part of your story turned out, you decide to make it part of the original book. This is like saying, "I love this chapter, and I want it to be part of my whole story!"
+
+So, you need to add a note for the part being added. This is where comes in commit message which describes the commit summary.
+
+In the future, if you want to make more changes or add new things to your story, you can create new chapters and commit them too. Each commit captures a specific part in your story, and all these committed chapters together make your amazing book! So, committing in Git is like saying, "I love this part of my story, and I want to remember it just like this."
+
+#### Branch:
+
+_Technical Explanation_
+
+A branch in Git is a divergent line of development within a single repository. Think of it as a separate version of your project where you can work on features, bug fixes, or experiments without affecting the main codebase immediately. Branches offer flexibility and isolation, allowing you to explore different possibilities without jeopardizing the overall project stability.
+
+Typically, How do you create a branch?
+
+Use the `git branch <branch_name>` command to create a new branch from the current commit. This creates a pointer to the current state of your project, allowing you to work independently on that branch.
+
+Here, you create a branch by typing `git branch <fix/new_character>`. At first when you create a Git repo the default branch is `main` earlier it used to be `master` in those olden days.
+
+You can switch your HEAD from `main` branch to `fix/new_character` by typing the command `git checkout <name_of_the_branch_where_you_want_to_checkout>`. In your case it is `git checkout fix/new_character`.
+
+Branches are typically named descriptively to reflect their purpose, such as feature/new_design or bugfix/memory_leak.
+
+_For dummies_
+
+Imagine you ask one of your co-author to write a cool adventure story in your special book. Now, the co-author might get an idea to try something different in your story, like sending your characters to _Canada_ or giving them new challenges. But, you also want to keep your original story safe and unchanged.
+
+So, here's where branches come in. Think of a branch as a copy of your original story and a plain canvas to make changes which will not affect the original story book. When you want to explore a new idea without changing the main story, you create a new branch.
+
+Now, if you decide that you really love one of the co-authors story sending the new character to _Canada_ and want to make it a permanent part of your main story, you can merge it back onto the main storybook. It's like saying, "This adventure was so cool, let's bring it back into the main storybook!"
+
+So, in Git, a branch is like a special pathway where you can try out new ideas and adventures in your project, without messing up your main project. It's a magical way for authors (and developers) to explore different storylines and keep everything organized!
+
+<!-- - Introduce branching as a way to work on features or fixes independently. -->
+
+## Collaborating with Git
+
+#### Local and Remote Repository:
+
+Before moving further, you need to know two more important things;
+
+The **local repository** is a copy of your project files stored on your computer, for tracking changes and versions. It's your sandbox for experimentation, where you can make changes, commit them, and experiment without affecting the main project.
+
+The **remote repository**, on the other hand, lives on a server like GitHub or GitLab. This is the official home of your project, accessible by anyone with permissions. It's where you share your work, collaborate with others, and keep a permanent record of your project's history.
+
+Imagine a local repository as a draft document you're working on, and the remote repository as the final published version.
+
+#### Cloning Repository:
+
+<!-- - Describe how to clone a repository for collaboration. -->
+
+_Technical defination_
+
+`git clone` is a fundamental command in Git used to create a local copy of an existing Git repository. It essentially downloads all the files, commit history, branches, and other data from a remote source (like GitHub, GitLab, or a local server) to your local machine.
+
+It creates a new directory on your local machine with the same name as the remote repository and populates it with all the downloaded data. It automatically creates a local branch (usually named master) that tracks the remote branch you cloned from.
+
+How you clone a remote repository on your machine?
+
+The `git clone <remote_repo_url> <local_repo_name>` command clones the repo. If you ommit the `<local_repo_name>` it will by default use the same name as the remote repository. You can use options like `-b` to specify a specific branch to clone.
+
+_For dummies_
+
+You have a notebook (local repository) where you write and rewrite your chapters. This notebook is yours alone, and you can make all the changes you want without affecting the original story.
+
+Now, you want to share your story with your co-author (remote repository). You wouldn't give them your only notebook, right? That's risky! Instead, you make a copy (using git clone) of your notebook and give that copy to your co-author. They can read your story and make improvements, but they can't write directly in your original notebook.
+
+When your co-author have ideas, they tell you (push changes), and you decide whether to add them to your original book (main branch in the remote repository). This way, your original story stays safe, and everyone enjoys the best version together!
+
+#### git pull & git push:
+
+<!-- - Explain how to update and share changes with remote repositories. -->
+
+The `git pull` command that is used to fetch and merge changes from a remote repository into your local branch. It is a combination of two separate Git commands:
+
+#### git fetch:
+
+This command fetches the changes from the remote repository without automatically merging them into your working branch. It updates the remote tracking branches in your local repository with the latest changes from the remote but doesn't modify your working directory.
+
+```bash
+git fetch origin
+```
+
+#### git merge:
+
+This command merges the changes fetched from the remote repository into your current working branch. If there are no conflicts, Git will automatically merge the changes. If conflicts arise, Git will mark the conflicting areas, and you'll need to resolve them manually.
+
+```bash
+git merge origin/main  # 'main' is the branch where you merge changes
+```
+
+By using `git pull`, you combine these two steps into one. It fetches the changes from the remote repository and then automatically merges them into your current working branch.
+
+```bash
+git pull origin main  # 'main' is the branch where you want pull changes from
+```
+
+It's important to note that `git pull` assumes you want to merge the changes into your current branch. If you are working with multiple branches and want to fetch changes for a specific branch without merging, you might want to use `git fetch` followed by `git merge` or `git checkout`.
+
+```bash
+git fetch origin
+git merge origin/main  # or git checkout main
+```
+
+<hr>
+
+#### git push:
+
+The `git push` command is used to upload local changes to a remote repository. When you make changes to your local repository and want to share those changes with others or update a remote repository, you use `git push` to send your committed changes to the remote repository.
+You can say it is opposite of `git pull`
+
+```bash
+git push <name_of_remote> <name_of_local_branch>
+```
+
+For example, if you want to push changes from your local "main" branch to the "main" branch on the remote repository named "origin," you would use:
+
+```bash
+git push origin main
+```
+
+```bash
+It is a good practice to fetch changes from the remote repository before pushing to ensure you have the latest changes.
+```
+
+<hr>
+
+Alright, wait a second! Ever wonder how your computer figures out where to send your changes? Like, does it even know the name or existence of the remote repository it's sending stuff to? Well, that's where `git remote add origin` jumps in. It's like the handshake that connects your local repo to the remote repo. Simple, right?
+
+#### git remote add origin:
+
+The `git remote add origin` command is used to set up a remote repository named "origin" for your local repository. This command establishes a connection between your local Git repository and a remote repository, enabling you to push and pull changes between them. The term "origin" is a conventional name often used for the default remote repository, but you can choose a different name if you prefer.
+
+```bash
+git remote add origin
+```
+
+_For dummies_
+
+Git pull is like pulling changes from the original shelve where all the files and drafts are stored. You as the author want to get the changes that your co-author haa made into your book So, you use `git pull` to get the new chapters which are added to your original book into your personal notebook. `git push` is you or your co-author pushing the new chapters to the original book. This will make the chapters available to other co-authors as well.
+
+## GitHub and GitLab
+
+<!-- - Briefly introduce popular Git hosting platforms like GitHub and GitLab.
+- Explain their role in collaboration and project management. -->
+
+GitHub and GitLab both are popular web-based Git repository hosting service that allows developers to store and manage their code, track changes, collaborate on projects, and share their work with the world. Both Github and Gitlab are built on top of Git.
+
+_For dummies_
+
+Think of GitHub and Gitlab is like a big, friendly library where all the authors gather to share their stories and store their books. You have a space in this town square where you can put your storybook for everyone to see. When you want to show your latest chapters or collaborate with friends, you bring your storybook to the library (GitHub and Gitlab). Others can visit, read your chapters, and even suggest changes or additions. It's like a marketplace for remote repository.
+
+## Conclusion
+
+- Summarize key Git concepts for beginners.
+- Highlight the importance of version control in collaborative projects.
+
+## Additional Resources
+
+- Provide links to Git documentation and tutorials for further learning.
