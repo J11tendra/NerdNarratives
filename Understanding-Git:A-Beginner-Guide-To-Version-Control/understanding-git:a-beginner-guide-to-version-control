@@ -1,8 +1,45 @@
 # Understanding Git: A Beginner's Guide to Version Control
 
-## Introduction
+## Table of Contents
 
-<!-- - Briefly introduce the importance of version control in software development. -->
+1. [**Introduction**](#introduction)
+
+2. [**What is Git?**](#what-is-git)
+
+3. [**Setting Up Git**](#setting-up-git)
+
+   - [Pre-installed Git on various operating systems](#pre-installed-git)
+   - [How to download and configure Git](#how-to-download-git)
+   - [Common Git configuration options](#git-configuration)
+
+4. [**Basic Git Concepts**](#basic-git-concepts)
+
+   - [Repository (Repo)](#repository-repo)
+   - [Commit](#commit)
+   - [Branch](#branch)
+
+5. [**Collaborating with Git**](#collaborating-with-git)
+
+   - [Local and Remote Repository](#local-and-remote-repository)
+   - [Cloning Repository](#cloning-repository)
+   - [git pull & git push](#git-pull--git-push)
+   - [git fetch](#git-fetch)
+   - [git merge](#git-merge)
+   - [git push](#git-push)
+   - [git remote add origin](#git-remote-add-origin)
+
+6. [**GitHub and GitLab**](#github-and-gitlab)
+
+7. [**Conclusion**](#conclusion)
+
+   - [Summary of key points covered in the blog post](#summary-of-the-blog)
+   - [Key points covered in the blog post](#key-points-from-the-summary)
+   - [How to make best out of this post](#how-to-make-best-out-of-this-blog)
+   - [Want some love](#want-some-love)
+
+8. [**Additional Resources**](#additional-resources)
+
+## Introduction
 
 Recently, while mentoring my friends, I received numerous questions about Git. After receiving positive feedback from mentoring friends on my straightforward explanations of Git, I've decided to share my insights in a blog.Their feedback was that I explain concepts in a straightforward manner, which they found helpful for efficient learning, often stating, "You break it down in a way that's easy for us to understand."
 
@@ -26,11 +63,9 @@ _sounds helpful and easy?_
 
 ## Setting Up Git
 
-<!-- - Guide readers through the process of installing Git on different platforms. -->
-
 Several operating system comes with Git pre-installed, but it depends on the specific version and distribution:
 
-#### Pre-installed Git:
+### Pre-installed Git:
 
 - **macOS**: Most macOS versions since Mavericks (10.9) include Git pre-installed as part of the Xcode Command Line Tools. However, if you don't have Xcode or haven't installed the tools, you'll need to install Git separately.
 
@@ -41,7 +76,7 @@ Several operating system comes with Git pre-installed, but it depends on the spe
 To see if Git is already installed on your system, you can open terminal or command prompt and type `git --version`
 and if you see output similar to this `git version 2.40.1` then Git is already present on your system.
 
-#### How to Download Git
+### How to Download Git
 
 You can install Git mainly using a terminal or a browser.
 
@@ -54,14 +89,12 @@ $ sudo apt-get install git
 **For Mac**
 
 ```bash
-$ brew install git`
+$ brew install git
 ```
 
 The above commands will install Git on your system, but you will need to configure for yourself by providing your username and email.
 
-#### Git Configuration
-
-<!-- - Provide basic configuration steps, including setting up a username and email. -->
+### Git Configuration
 
 After installing Git on your system, the next step is to configure it. Let's get familiar with some common terms within the Git ecosystem.
 
@@ -75,7 +108,7 @@ Git config is the way to personalize your Git environment and behaviour. It stor
 
 Now, the question is: how do you configure these settings to get started and actually use Git?
 
-#### How to edit Git config:
+### How to edit Git config:
 
 You can edit the .gitconfig files directly or use the `git config` command. The `git config` command provides a more convenient way to set, get, or list configuration values:
 
@@ -120,9 +153,7 @@ Here are some common configuration options you might want to consider:
 
 ## Basic Git Concepts
 
-#### Repository (Repo):
-
-  <!-- - Explain what a repository is and its significance in Git. -->
+### Repository (Repo):
 
 _Technical defination_
 
@@ -161,9 +192,7 @@ To make Git pay attention, use `git add names.txt` to say, "Hey, I want you to w
 
 So, remember to start with `git init` and use `git add` to introduce Git to your project files.
 
-#### Commit:
-
-<!-- - Define commits as snapshots of changes and how they form the project's history. -->
+### Commit:
 
 _Technical definition_
 
@@ -181,7 +210,7 @@ So, you need to add a note for the part being added. This is where comes in comm
 
 In the future, if you want to make more changes or add new things to your story, you can create new chapters and commit them too. Each commit captures a specific part in your story, and all these committed chapters together make your amazing book! So, committing in Git is like saying, "I love this part of my story, and I want to remember it just like this."
 
-#### Branch:
+### Branch:
 
 _Technical Explanation_
 
@@ -207,11 +236,9 @@ Now, if you decide that you really love one of the co-authors story sending the 
 
 So, in Git, a branch is like a special pathway where you can try out new ideas and adventures in your project, without messing up your main project. It's a magical way for authors (and developers) to explore different storylines and keep everything organized!
 
-<!-- - Introduce branching as a way to work on features or fixes independently. -->
-
 ## Collaborating with Git
 
-#### Local and Remote Repository:
+### Local and Remote Repository:
 
 Before moving further, you need to know two more important things;
 
@@ -221,9 +248,7 @@ The **remote repository**, on the other hand, lives on a server like GitHub or G
 
 Imagine a local repository as a draft document you're working on, and the remote repository as the final published version.
 
-#### Cloning Repository:
-
-<!-- - Describe how to clone a repository for collaboration. -->
+### Cloning Repository:
 
 _Technical defination_
 
@@ -243,13 +268,11 @@ Now, you want to share your story with your co-author (remote repository). You w
 
 When your co-author have ideas, they tell you (push changes), and you decide whether to add them to your original book (main branch in the remote repository). This way, your original story stays safe, and everyone enjoys the best version together!
 
-#### git pull & git push:
-
-<!-- - Explain how to update and share changes with remote repositories. -->
+### git pull & git push:
 
 The `git pull` command that is used to fetch and merge changes from a remote repository into your local branch. It is a combination of two separate Git commands:
 
-#### git fetch:
+### git fetch:
 
 This command fetches the changes from the remote repository without automatically merging them into your working branch. It updates the remote tracking branches in your local repository with the latest changes from the remote but doesn't modify your working directory.
 
@@ -257,7 +280,7 @@ This command fetches the changes from the remote repository without automaticall
 git fetch origin
 ```
 
-#### git merge:
+### git merge:
 
 This command merges the changes fetched from the remote repository into your current working branch. If there are no conflicts, Git will automatically merge the changes. If conflicts arise, Git will mark the conflicting areas, and you'll need to resolve them manually.
 
@@ -280,7 +303,7 @@ git merge origin/main  # or git checkout main
 
 <hr>
 
-#### git push:
+### git push:
 
 The `git push` command is used to upload local changes to a remote repository. When you make changes to your local repository and want to share those changes with others or update a remote repository, you use `git push` to send your committed changes to the remote repository.
 You can say it is opposite of `git pull`
@@ -303,7 +326,7 @@ It is a good practice to fetch changes from the remote repository before pushing
 
 Alright, wait a second! Ever wonder how your computer figures out where to send your changes? Like, does it even know the name or existence of the remote repository it's sending stuff to? Well, that's where `git remote add origin` jumps in. It's like the handshake that connects your local repo to the remote repo. Simple, right?
 
-#### git remote add origin:
+### git remote add origin:
 
 The `git remote add origin` command is used to set up a remote repository named "origin" for your local repository. This command establishes a connection between your local Git repository and a remote repository, enabling you to push and pull changes between them. The term "origin" is a conventional name often used for the default remote repository, but you can choose a different name if you prefer.
 
@@ -317,20 +340,56 @@ Git pull is like pulling changes from the original shelve where all the files an
 
 ## GitHub and GitLab
 
-<!-- - Briefly introduce popular Git hosting platforms like GitHub and GitLab.
-- Explain their role in collaboration and project management. -->
-
 GitHub and GitLab both are popular web-based Git repository hosting service that allows developers to store and manage their code, track changes, collaborate on projects, and share their work with the world. Both Github and Gitlab are built on top of Git.
 
 _For dummies_
 
-Think of GitHub and Gitlab is like a big, friendly library where all the authors gather to share their stories and store their books. You have a space in this town square where you can put your storybook for everyone to see. When you want to show your latest chapters or collaborate with friends, you bring your storybook to the library (GitHub and Gitlab). Others can visit, read your chapters, and even suggest changes or additions. It's like a marketplace for remote repository.
+Think of GitHub and Gitlab is like a big, friendly library where all the authors gather to share their stories and store their books. You have a shelve in this library where you can put your storybook for everyone to see. When you want to show your latest chapters or collaborate with other authors, you bring your storybook to the library (GitHub and Gitlab). Others can visit, read your chapters, and even suggest changes or additions. It's like a marketplace for remote repository.
 
 ## Conclusion
 
-- Summarize key Git concepts for beginners.
-- Highlight the importance of version control in collaborative projects.
+### Summary of the Blog:
+
+This blog post provides a detailed introduction to Git, version control, and related concepts. I tried to explain the importance of version control in software development and then explains what Git is, both technically and in layman's terms.
+
+### Key points from the summary:
+
+- **Git**: A free tool for tracking changes in code, allowing collaboration and reverting to previous versions.
+- **Version control**: Helps manage different versions of your project, especially useful when multiple people are working on it.
+- **Repository**: Where all the files and folders in your project are stored, including code, documentation, images, etc.
+- **Commit**: A snapshot of your project at a specific point in time, captured with a message describing the changes.
+- **Branch**: A divergent line of development within a single repository, allowing you to work on features or fixes independently without affecting the main codebase.
+- **Local repository**: A copy of your project files stored on your computer.
+- **Remote repository**: The official home of your project, accessible by anyone with permissions (e.g., GitHub, GitLab).
+- **Cloning**: Creating a local copy of an existing Git repository.
+- **git pull**: Fetches and merges changes from a remote repository into your local branch.
+- **git push**: Uploads local changes to a remote repository.
+- **GitHub/GitLab**: Popular web-based Git repository hosting services for collaboration and project management.
+
+### How to make best out of this blog;
+
+Here are some tips to make the most of this blog and learn Git efficiently:
+
+1. Follow the structure and don't skip the basics.
+
+2. Read and understand each section carefully.
+
+3. Use the analogies to help you understand complex concepts.
+
+4. Practice by setting up your Git repository and using the commands mentioned in the blog.
+
+5. Use the additional resources provided in the blog to deepen your knowledge.
+
+6. Don't hesitate to ask questions and seek help from me or any other Git users.
+
+<hr>
+
+### Want some love
+
+If you've read this far and it was useful, please share it on X and mention [JitendraC](https://twitter.com/JiitendraC). Drop a comment below, telling me what you think about the article. If you want more of my content, hit the follow button here. You can also catch my tech journey on X. Thanks for reading!
 
 ## Additional Resources
 
-- Provide links to Git documentation and tutorials for further learning.
+I found this useful youtube video by [@KunalKushwaha](https://twitter.com/kunalstwt/).
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/apGV9Kg7ics?si=MlrLwlgpc_s7yM1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
