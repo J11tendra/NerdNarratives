@@ -296,6 +296,8 @@ _For dummies_
 
 <!-- git cloning visual -->
 
+![git clonning](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/seventh.gif?raw=true)
+
 You have a notebook (local repository) where you write and rewrite your chapters. This notebook is yours alone, and you can make all the changes you want without affecting the original story.
 
 Now, you want to share your story with your co-author (remote repository). You wouldn't give them your only notebook, right? That's risky! Instead, you make a copy (using git clone) of your notebook and give that copy to your co-author. They can read your story and make improvements, but they can't write directly in your original notebook.
@@ -377,6 +379,8 @@ Git pull is like pulling changes from the original shelve where all the files an
 GitHub and GitLab both are popular web-based Git repository hosting service that allows developers to store and manage their code, track changes, collaborate on projects, and share their work with the world. Both Github and Gitlab are built on top of Git.
 
 _For dummies_
+
+<!-- github library -->
 
 Think of GitHub and Gitlab is like a big, friendly library where all the authors gather to share their stories and store their books. You have a shelve in this library where you can put your storybook for everyone to see. When you want to show your latest chapters or collaborate with other authors, you bring your storybook to the library (GitHub and Gitlab). Others can visit, read your chapters, and even suggest changes or additions. It's like a marketplace for remote repository.
 
