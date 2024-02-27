@@ -57,6 +57,8 @@ _For dummies:_
 
 <!-- Gif not using Version Control -->
 
+![Version Control Practical Example](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/first.gif?raw=true)
+
 Imagine you're an author working on a book with multiple co-authors. Your goal is to create a masterpiece, and each co-author contributes their unique chapters. However, coordinating everyone's work becomes challenging.
 
 So, we were introduced to Git. By which we can track the universal version of the book. We can even keep a track on the changes made by the all the co-author to specific parts of the book. This becomes efficient for the writers to collaborate better and have a shared local copy on their individual machine.
@@ -76,6 +78,8 @@ Several operating system comes with Git pre-installed, but it depends on the spe
 - **Windows**: Git is not included with default Windows installations. However, Microsoft offers a standalone Git installer and includes Git Bash within Windows Subsystem for Linux (WSL).
 
 <!-- Git is installed or not -->
+
+![Terminal cmd to check if git is installed](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/second.gif?raw=true)
 
 To see if Git is already installed on your system, you can open terminal or command prompt and type `git --version`
 and if you see output similar to this `git version 2.40.1` then Git is already present on your system.
@@ -144,6 +148,8 @@ git config --list
 
 <!-- picture to visualize -->
 
+![git config commands](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/third.png?raw=true)
+
 Incase you are wondering what is key and value into the command? Don't worry initially you just need a couple of basic Git config commands to get started: `git config --global user.name` and `git config --global user.email`.
 
 **Some common configuration options:**
@@ -168,6 +174,8 @@ A Git repository is a place where all the files and folders in your project, inc
 _For dummies_
 
 <!-- local repository -->
+
+![Local git repository](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/four.gif?raw=true)
 
 You as the author are writing story which keeps growing, and you want to make sure you remember every version of it. A Git repository is like a special shelve of the library where you keep all the different drafts of your story.
 
@@ -206,6 +214,8 @@ _Technical definition_
 
 <!-- commit visual -->
 
+![git commit](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/fifth.gif?raw=true)
+
 A commit is like taking a snapshot of your project at a specific point in time. It captures the state of all the files and folders in your repository, along with a message describing the changes you made. The commit stores the actual content of your files at that specific time, not just the differences from the previous version. This allows you to easily revert to any old version if needed.
 
 There is also a commit message which describes what changes you made in the commit. It is crucial for understanding the history of your project and collaborating effectively with others. **While technically, Git doesn't enforce a hard limit of 50 characters for commit messages, it is highly recommended to keep it concise and under 50 characters for good practices.**
@@ -238,6 +248,8 @@ Branches are typically named descriptively to reflect their purpose, such as fea
 
 <!-- branch gif -->
 
+![git branching](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/sixth.gif?raw=true)
+
 _For dummies_
 
 Imagine you ask one of your co-author to write a cool adventure story in your special book. Now, the co-author might get an idea to try something different in your story, like sending your characters to _Canada_ or giving them new challenges. But, you also want to keep your original story safe and unchanged.
@@ -258,9 +270,13 @@ The **local repository** is a copy of your project files stored on your computer
 
 <!-- local repo -->
 
+![local git repository](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/local-repo.png?raw=true)
+
 The **remote repository**, on the other hand, lives on a server like GitHub or GitLab. This is the official home of your project, accessible by anyone with permissions. It's where you share your work, collaborate with others, and keep a permanent record of your project's history.
 
 <!-- remote repo -->
+
+![local git repository](https://github.com/J11tendra/NerdNarratives/blob/main/Understanding-Git:A-Beginner-Guide-To-Version-Control/Assets/github.png?raw=true)
 
 Imagine a local repository as a draft document you're working on, and the remote repository as the final published version.
 
@@ -277,6 +293,8 @@ How you clone a remote repository on your machine?
 The `git clone <remote_repo_url> <local_repo_name>` command clones the repo. If you ommit the `<local_repo_name>` it will by default use the same name as the remote repository. You can use options like `-b` to specify a specific branch to clone.
 
 _For dummies_
+
+<!-- git cloning visual -->
 
 You have a notebook (local repository) where you write and rewrite your chapters. This notebook is yours alone, and you can make all the changes you want without affecting the original story.
 
