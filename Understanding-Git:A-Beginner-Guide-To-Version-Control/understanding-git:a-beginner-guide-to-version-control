@@ -55,6 +55,8 @@ Git is great at handling different versions of your code, like when multiple peo
 
 _For dummies:_
 
+<!-- Gif not using Version Control -->
+
 Imagine you're an author working on a book with multiple co-authors. Your goal is to create a masterpiece, and each co-author contributes their unique chapters. However, coordinating everyone's work becomes challenging.
 
 So, we were introduced to Git. By which we can track the universal version of the book. We can even keep a track on the changes made by the all the co-author to specific parts of the book. This becomes efficient for the writers to collaborate better and have a shared local copy on their individual machine.
@@ -72,6 +74,8 @@ Several operating system comes with Git pre-installed, but it depends on the spe
 - **Linux**: Many popular Linux distributions like Ubuntu, Debian, Fedora, and Arch Linux come with Git pre-installed by default.
 
 - **Windows**: Git is not included with default Windows installations. However, Microsoft offers a standalone Git installer and includes Git Bash within Windows Subsystem for Linux (WSL).
+
+<!-- Git is installed or not -->
 
 To see if Git is already installed on your system, you can open terminal or command prompt and type `git --version`
 and if you see output similar to this `git version 2.40.1` then Git is already present on your system.
@@ -138,6 +142,8 @@ git config --get <key> #(local)
 git config --list
 ```
 
+<!-- picture to visualize -->
+
 Incase you are wondering what is key and value into the command? Don't worry initially you just need a couple of basic Git config commands to get started: `git config --global user.name` and `git config --global user.email`.
 
 **Some common configuration options:**
@@ -160,6 +166,8 @@ _Technical defination_
 A Git repository is a place where all the files and folders in your project, including code, documentation, images, and any other relevant files are stored. It allows you to record and manage different versions of your project, collaborate with others, and revert to previous versions if needed. It also contains a commit history, and information about branches.
 
 _For dummies_
+
+<!-- local repository -->
 
 You as the author are writing story which keeps growing, and you want to make sure you remember every version of it. A Git repository is like a special shelve of the library where you keep all the different drafts of your story.
 
@@ -196,6 +204,8 @@ So, remember to start with `git init` and use `git add` to introduce Git to your
 
 _Technical definition_
 
+<!-- commit visual -->
+
 A commit is like taking a snapshot of your project at a specific point in time. It captures the state of all the files and folders in your repository, along with a message describing the changes you made. The commit stores the actual content of your files at that specific time, not just the differences from the previous version. This allows you to easily revert to any old version if needed.
 
 There is also a commit message which describes what changes you made in the commit. It is crucial for understanding the history of your project and collaborating effectively with others. **While technically, Git doesn't enforce a hard limit of 50 characters for commit messages, it is highly recommended to keep it concise and under 50 characters for good practices.**
@@ -226,6 +236,8 @@ You can switch your HEAD from `main` branch to `fix/new_character` by typing the
 
 Branches are typically named descriptively to reflect their purpose, such as feature/new_design or bugfix/memory_leak.
 
+<!-- branch gif -->
+
 _For dummies_
 
 Imagine you ask one of your co-author to write a cool adventure story in your special book. Now, the co-author might get an idea to try something different in your story, like sending your characters to _Canada_ or giving them new challenges. But, you also want to keep your original story safe and unchanged.
@@ -244,7 +256,11 @@ Before moving further, you need to know two more important things;
 
 The **local repository** is a copy of your project files stored on your computer, for tracking changes and versions. It's your sandbox for experimentation, where you can make changes, commit them, and experiment without affecting the main project.
 
+<!-- local repo -->
+
 The **remote repository**, on the other hand, lives on a server like GitHub or GitLab. This is the official home of your project, accessible by anyone with permissions. It's where you share your work, collaborate with others, and keep a permanent record of your project's history.
+
+<!-- remote repo -->
 
 Imagine a local repository as a draft document you're working on, and the remote repository as the final published version.
 
