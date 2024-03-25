@@ -6,6 +6,10 @@ API is really useful for the integration of new applications with existing softw
 
 A lot of times you hear the term "API" from other devs, Do you know what exactly "API" is? How it works? In this article, we'll learn about API.
 
+<!-- api-working -->
+
+![API Working](https://github.com/J11tendra/NerdNarratives/blob/main/what-is-api/assets/api-working.png?raw=true)
+
 ## What is API?
 
 API stands for Application Protocol Interface. API is a mechanism that enables two different software components to communicate with each other which has its own set of rules and protocols.
@@ -18,7 +22,7 @@ But, What is an API? Well, think of it like this: you have social media, games, 
 
 <!-- Image of vending machine -->
 
-![Vending Machine Example]()
+![Vending Machine Example](https://github.com/J11tendra/NerdNarratives/blob/main/what-is-api/assets/vending-machine.png?raw=true)
 
 ## How API Works?
 
@@ -37,7 +41,7 @@ On the web, there is HTTP protocol (which stands for Hyper Text Markup Language)
 
 <!-- api architecture -->
 
-![API Architecture]()
+![API Architecture](https://github.com/J11tendra/NerdNarratives/blob/main/what-is-api/assets/api-architecture.png?raw=true)
 
 ## API Protocols
 
@@ -85,4 +89,4 @@ API is nothing a mechanism for two application to communicate with certain set o
 
 Because APIs allow companies to open access to their resources while maintaining security and control, they have become a valuable aspect of modern business and personal projects. It is important to understand API.
 
-Interesting in connecting on X? Say me Hi at [@JitendraC](www.twitter.com/@jiitendrac)
+Interesting in connecting on X? Say me Hi at [@JitendraC](https://twitter.com/JiitendraC)
