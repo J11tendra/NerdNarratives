@@ -18,6 +18,8 @@ But, What is an API? Well, think of it like this: you have social media, games, 
 
 <!-- Image of vending machine -->
 
+![Vending Machine Example]()
+
 ## How API Works?
 
 Computers follow protocols to communicate with each other. Without a protocol, they don't have an expected form of communication.
@@ -34,6 +36,8 @@ On the web, there is HTTP protocol (which stands for Hyper Text Markup Language)
 - **Body** – the body contains the actual requested data
 
 <!-- api architecture -->
+
+![API Architecture]()
 
 ## API Protocols
 
@@ -76,6 +80,8 @@ Partner APIs connect strategic business partners. Typically, developers access t
 Composite APIs combine multiple data or service APIs. They allow programmers to access several endpoints in a single call. Composite APIs are useful in microservices architecture where performing a single task may require information from several sources.
 
 ## Conclusion
+
+API is nothing a mechanism for two application to communicate with certain set of information.
 
 Because APIs allow companies to open access to their resources while maintaining security and control, they have become a valuable aspect of modern business and personal projects. It is important to understand API.
 
