@@ -1,20 +1,28 @@
-# Things I learned as a Self Taught Developer
-
 ## Table of Content
 
 - [Introduction](#introduction)
 - [Fundamentals is the King](#fundamentals-is-the-king)
 - [Big Tech is not the end of the World](#big-tech-is-not-the-end-of-the-world)
 - [Networking is the Key](#networking-is-the-key)
+- [The stack is irrelevant](#the-stack-is-irrelevant)
 - [Learning is Real](#learning-is-real)
 - [Programming-is-Hard](#programming-is-hard)
 - [Importance of Real World Experience](#importance-of-real-world-experience)
 - [Become a Master of One Trade](#become-a-master-of-one-trade)
-- [Learn How to Collobrate](#learn-how-to-collobrate)
+- [Learn How to Collaborate](#learn-how-to-collaborate)
 - [Project based Learning](#project-based-learning)
 - [Conclusion](#conclusion)
 
+<!-- Image of Coder OWL-->
+
+![Self Taught Coder Owl](https://github.com/J11tendra/NerdNarratives/blob/main/Things-I-learned-as-a-Self-Taught-Developer/assets/owl.jpg?raw=true)
+
+<hr>
+> “The most disastrous thing that you can ever learn is your first programming language.” ― Alan Kay
+
 ## Introduction
+
+In this blog Jitendra shares his 10 most important lessons he learned as a self taught developer. So if you in the same boat and your time is worth trying to implement these lessons in your programming life. Through my experience, I've come to learn several crucial lessons that have shaped my approach to coding and career development. In this article, I'll share some insights from my journey as a self-taught developer.
 
 ## Fundamentals is the King
 
@@ -27,6 +35,10 @@ Working at Big Tech may not be the best experience for programmers who are looki
 ## Networking is the key
 
 Building a strong network within the tech community is invaluable. Networking opens doors to opportunities, mentorship, and collaboration. Attend meetups, conferences, and online forums to connect with like-minded individuals. Share your knowledge, seek advice, and be open to learning from others. Your network can play a significant role in your career growth and development as a self-taught developer.
+
+## The stack is irrelevant
+
+It's natural to love the tools you use every day, but they're not as important as you might think. New tools are built to solve problems that their predecessors failed to solve. New technology can be a lot of fun, but becoming too attached to it can be harmful. So, be sure to learn about the latest technology, but also remember to use it as a tool, not a crutch. It's foolish to ignore new technology and stick with what you know. Instead, challenge yourself to explore new languages, frameworks, and patterns, because that's how you'll grow and expand your knowledge. Focus on learning because that's what makes work enjoyable.
 
 ## Learning is Real
 
@@ -53,3 +65,9 @@ Collaboration is essential in the world of software development. Learn how to ef
 Hands-on projects are an excellent way to reinforce your learning and showcase your skills to potential employers. Work on personal projects or contribute to open-source initiatives to apply what you've learned in a real-world context. Projects allow you to experiment with different technologies, solve practical problems, and build a portfolio of work that demonstrates your abilities. Focus on creating projects that align with your interests and career goals, and don't be afraid to step out of your comfort zone.
 
 ## Conclusion
+
+Teaching yourself programming is a journey filled with challenges and opportunities for growth. By implementing this points into your programming journey you can succeed as self taught developer.
+
+If you have read this far and find my blogs worth reading feel free to follow me here so you can get my next blog update straight in your feed.
+
+Interested in connecting on X? Say me Hi at [@JitendraC](https://twitter.com/JiitendraC)
