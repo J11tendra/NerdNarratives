@@ -20,7 +20,7 @@ function Heading(props) {
 </ul>
 </div>
 
-## 2. **JSX**
+## 2. **JSX & TSX**
 
 JSX is JavaScript XML, which allows us to write HTML in React. It introduces XML-like tags and attributes to create React elements. It makes it easy to create React Components by letting you write HTML-like code in `.jsx` files. Instead of using complicated JavaScript, JSX makes the code readable and clean. React DOM uses camelCase for attribute naming such as `htmlFor, onClick`.
 
@@ -29,6 +29,34 @@ JSX is JavaScript XML, which allows us to write HTML in React. It introduces XML
 ```javascript
 <h1 className="head">This is H1!</h1>
 ```
+
+Now, TSX is a file extension for TypeScript files that contains JSX syntax. With TSX you can write type-checked code with the existing JSX syntax. TypeScript is not a different language, it is just a superset of JavaScript that adds optional static typing.
+
+More simply, with TSX files you can write React components using TypeScript and JSX together.
+
+**Example of TSX**
+
+```TypeScript
+interface AgeProps {
+  age: number;
+}
+
+const GreetAge = (props: AgeProps) => {
+  return (
+    <div>
+      Hello, you are {props.age} old.
+    </div>
+  );
+};
+```
+
+<div style="background: #e0f7fa; color: #01579b; padding: 20px;">Note:
+<ul>
+<li style="list-style: circle;">JSX files uses a `.jsx` file extension.</li>
+<li style="list-style: circle;">TSX files uses a `.tsx` file extension.</li>
+<li style="list-style: circle;">TypeScript's type system helps catch potential errors early in development.</li>
+</ul>
+</div>
 
 ## 3. **Fragments**
 
